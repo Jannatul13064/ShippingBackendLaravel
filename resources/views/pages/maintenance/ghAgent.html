@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FFSM</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../asset/javascript/tailwind.config.js"></script>
+    <!-- Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- select 2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../../asset/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="py-2 shadow sticky top-0 z-50 bg-light">
+      <div class="container">
+        <div class="flex justify-between items-center">
+          <a href="../../index.html">
+            <img src="../../asset/images/logo.png" alt="" class="w-48" />
+          </a>
+
+          <nav>
+            <ul class="menu">
+              <li>
+                <a href="../../index.html">
+                  <i class="fa-solid fa-house"></i>
+                  <p class="font-medium">Home</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="../seaExport/seaExport.html">
+                  <i class="fa-solid fa-ship"></i>
+                  <p class="font-medium">Sea Export</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="../seaImport/seaImport.html">
+                  <i class="fa-solid fa-ship"></i>
+                  <p class="font-medium">Sea Import</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="../airExport/airExport.html">
+                  <i class="fa-solid fa-plane-departure"></i>
+                  <p class="font-medium">Air Export</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="../airImport/airImport.html">
+                  <i class="fa-solid fa-plane-arrival"></i>
+                  <p class="font-medium">Air Import</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="maintenance.html" class="active">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  <p class="font-medium">Maintenance</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="pt-4">
+      <div class="container">
+        <div>
+          <aside class="sidebar">
+            <nav class="sidebar_items">
+              <ul class="flex flex-col gap-2 text-[15px]">
+                <li>
+                  <div>
+                    <a href="../index.html">
+                      <i class="fa-solid fa-house"></i>
+                      <p class="font-medium">Home</p>
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="./seaExport/seaExport.html">
+                      <i class="fa-solid fa-ship"></i>
+                      <p class="font-medium">Sea Export</p>
+                    </a>
+
+                    <button class="dropdown_btn">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown">
+                    <ol class="dropdown_items">
+                      <li>
+                        <div>
+                          <a href="./booking/addBooking.html">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Booking</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./booking/addBooking.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Booking</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./booking/addBooking.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Booking List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Shipping Order</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./shippingOrder/addShippingOrder.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Shipping Order</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./shippingOrder/shippingOrderList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Shipping Order List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Cargo Receive</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./cargoReceive/addCargoReceive.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Cargo Receive</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./cargoReceive/cargoReceiveList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Cargo Receive List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Cargo Stuffing</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./cargoStuffing/addStuffing.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Stuffing</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./cargoStuffing/stuffingList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Stuffing List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./cargoStuffing/addStuffingPackage.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Stuffing Package</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="./cargoStuffing/stuffingPackageList.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Stuffing Package List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Shipment Advice</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./shipmentAdvice/addShipmentAdvice.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Shipment Advice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="./shipmentAdvice/shipmentAdviceList.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Shipment Advice List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">HBL</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./HBL/addHBL.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add HBL</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./HBL/HBLList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">HBL List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">MBL</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./MBL/add1stLegMBL.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add 1st Leg MBL</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./MBL/1stLegMBLList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">1st Leg MBL List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./MBL/add2ndLegMBL.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add 2nd Leg MBL</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./MBL/2ndLegMBLList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">2nd Leg MBL List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./MBL/add3rdLegMBL.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add 3rd Leg MBL</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./MBL/3rdLegMBLList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">3rd Leg MBL List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Freight Invoice</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./freightInvoice/addFreightInvoice.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Freight Invoice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./freightInvoice/freightInvoice.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Freight Invoice</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Debit Note</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./debitNote/addDebitNote.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Debit Note</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./debitNote/debitNote.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Debit Note</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Credit Note</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./creditNote/addCreditNote.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Credit Note</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./creditNote/creditNote.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Credit Note</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Expense Bill</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./expenseBill/addExpenseBill.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Expense Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./expenseBill/expenseBill.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Expense Bill</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Report</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./report/profit&lossStatement.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  Profit & Loss Statement
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./report/volumeReport.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Volume Report</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+                    </ol>
+                  </nav>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="./seaImport/seaImport.html">
+                      <i class="fa-solid fa-ship"></i>
+                      <p class="font-medium">Sea Import</p>
+                    </a>
+
+                    <button class="dropdown_btn">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown">
+                    <ol class="dropdown_items">
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">House Bill</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addHouseBill.html">
+                                <i
+                                  class="fa-solid fa-house-chimney-medical"
+                                ></i>
+                                <p class="font-medium">Add House Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./houseBillList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">House Bill List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Master Bill</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addMasterBill.html">
+                                <i class="fa-solid fa-landmark"></i>
+                                <p class="font-medium">Add Master Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./masterBillList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Master Bill List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Arrival Notice</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addArrivalNotice.html">
+                                <i class="fa-solid fa-comment-medical"></i>
+                                <p class="font-medium">Add Arrival Notice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./arrivalNoticeList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Arrival Notice List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Forward Letter</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addForwardLetter.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Forward Letter</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./forwardLetterList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Forward Letter List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Delivery Order</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addDeliveryOrder.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Delivery Order</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./deliveryOrderList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Delivery Order List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Freight Invoice</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addFreightInvoice.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Freight Invoice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./freightInvoice.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Freight Invoice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./freightInvoiceRegister.html">
+                                <i
+                                  class="fa-regular fa-folder-open text-xl"
+                                ></i>
+                                <p class="font-medium">
+                                  Freight Invoice Register
+                                </p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Expense Bill</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addExpenseBill.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Expense Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./expenseBill.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Expense Bill List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./expenseBillRegister.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Expense Bill Register</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Custom Expense Bill</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addCustomExpense.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">
+                                  Add Custom Expense Bill
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./customExpenseBill.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  Custom Expense Bill List
+                                </p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Debit Note</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addDebitNote.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Debit Note</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./debitNote.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Debit Note List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./debitNoteRegister.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Debit Note Register</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Credit Note</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addCreditNote.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Credit Note</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./creditNote.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Credit Note List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./creditNoteRegister.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Credit Note Register</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">GH Bill</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addCFBill.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add GH Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./cfBill.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">GH Bill List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">GH Bill Credit Note</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addCFBillCreditNote.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">
+                                  Add GH Bill Credit Note
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./cfBillCredit.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  GH Bill Credit Note List
+                                </p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">GH Bill Debit Note</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./addCFBillDebitNote.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">
+                                  Add GH Bill Debit Note
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./cfBillDebit.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  GH Bill Debit Note List
+                                </p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <div>
+                          <a href="">
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Report</p>
+                          </a>
+                          <button class="sub_dropdown_btn">
+                            <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                        </div>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="./profitLossStatement.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  Profit & Loss Statement
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./customProfitLossStatement.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Custom Profit & Loss</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./volumeReport.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Volume Report</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="./cfVolumeReport.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">GH Volume Report</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+                    </ol>
+                  </nav>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="./airExport/airExport.html">
+                      <i class="fa-solid fa-plane-departure"></i>
+                      <p class="font-medium">Air Export</p>
+                    </a>
+
+                    <button class="dropdown_btn">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown"></nav>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="./airImport/airImport.html">
+                      <i class="fa-solid fa-plane-arrival"></i>
+                      <p class="font-medium">Air Import</p>
+                    </a>
+
+                    <button class="dropdown_btn">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown">
+                    <ol class="dropdown_items">
+                      <li>
+                        <a href="./shipper.html" class="active">
+                          <i class="fa-solid fa-truck-fast"></i>
+                          <p class="font-medium">Shipper</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./consignee.html">
+                          <i class="fa-solid fa-paper-plane"></i>
+                          <p class="font-medium">consignee</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./agent.html">
+                          <i class="fa-solid fa-users"></i>
+                          <p class="font-medium">Agent</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./GHAgent.html">
+                          <i class="fa-solid fa-users"></i>
+                          <p class="font-medium">GH Agent</p>
+                        </a>
+                      </li>
+                    </ol>
+                  </nav>
+                </li>
+
+                <li>
+                  <div class="active_sidebar">
+                    <a href="maintenance.html">
+                      <i class="fa-solid fa-screwdriver-wrench"></i>
+                      <p class="font-medium">Maintenance</p>
+                    </a>
+
+                    <button class="dropdown_btn arrow_rotate">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown dropdown_show">
+                    <ol class="dropdown_items">
+                      <li>
+                        <a href="./shipper.html">
+                          <i class="fa-solid fa-truck-fast"></i>
+                          <p class="font-medium">Shipper</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./consignee.html">
+                          <i class="fa-solid fa-paper-plane"></i>
+                          <p class="font-medium">Consignee</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./agent.html">
+                          <i class="fa-solid fa-users"></i>
+                          <p class="font-medium">Agent</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./c&fAgent.html">
+                          <i class="fa-solid fa-users"></i>
+                          <p class="font-medium">C&F Agent</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./ghAgent.html" class="active">
+                          <i class="fa-solid fa-users"></i>
+                          <p class="font-medium">GH Agent</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Carrier</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Container</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">FDR VSL</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">MTR VSL</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Mode</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">3rd Party</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Port</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Banking Info.</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Shipper Bank</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">consignee Bank</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Country</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Trade</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Unit</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Sales Person</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Tos</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Commodity</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">MAWB</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Currency</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">CFS</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Income Head</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Expense Head</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./administration.html">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Administration</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./administrationRole.html">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">Administration Role</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./company.html">
+                          <i class="fa-solid fa-building"></i>
+                          <p class="font-medium">Company</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./myBackup.html">
+                          <i class="fa-regular fa-folder-open"></i>
+                          <p class="font-medium">My Backup</p>
+                        </a>
+                      </li>
+                    </ol>
+                  </nav>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="">
+                      <i class="fa-solid fa-bell"></i>
+                      <p class="font-medium">Notification</p>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="main_content">
+            <div class="min-h-[73vh]">
+              <div
+                class="main_content_head"
+              >
+                <nav class="flex text-[15px]" aria-label="Breadcrumb">
+                  <ol class="flex items-center space-x-1 font-medium">
+                    <li class="flex items-center">
+                      <a
+                        href="./maintenance.html"
+                        class="flex gap-2 items-center"
+                      >
+                        <i class="fa-solid fa-folder-open"></i>
+                        Maintenance
+                      </a>
+                    </li>
+
+                    <li aria-current="page">
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-chevron-right fa-2xs mt-1"></i>
+                        <span class="ml-1 md:ml-2"> GH Agent </span>
+                      </div>
+                    </li>
+                  </ol>
+                </nav>
+
+                <div class="flex items-center gap-2 text-white">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <p>14-06-2023</p>
+                </div>
+              </div>
+
+              <div class="border rounded mt-4">
+                <div
+                  class="border-b p-2 bg-gray-100 font-medium flex justify-between items-center"
+                >
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-users"></i>
+                    <p>GH Agent</p>
+                  </div>
+
+                  <div class="flex gap-4">
+                    <div class="filter_input">
+                      <input
+                        type="text"
+                        name=""
+                        placeholder="Type to Filter"
+                      />
+
+                      <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </span>
+                    </div>
+
+                    <div>
+                      <button
+                        data-modal-target="AddGHAgent"
+                        data-modal-toggle="AddGHAgent"
+                        class="text-sm px-4 py-2 border rounded bg-primary text-light"
+                      >
+                        + Add GH Agent
+                      </button>
+
+                      <!--  Add GH Agent modal -->
+                      <div
+                        id="AddGHAgent"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0"
+                      >
+                        <div class="relative w-full max-w-2xl max-h-full">
+                          <div class="relative bg-white rounded-lg shadow">
+                            <div
+                              class="flex items-center justify-between p-4 border-b rounded-t"
+                            >
+                              <h3
+                                class="text-base font-medium text-black flex gap-2 items-center"
+                              >
+                                <i class="fa-solid fa-truck-fast"></i>
+                                Add GH Agent
+                              </h3>
+                              <button
+                                class="text-gray-400 hover:bg-gray-700 hover:text-white rounded-lg text-sm py-1 px-2 duration-300"
+                                data-modal-hide="AddGHAgent"
+                              >
+                                <i class="fa-solid fa-xmark"></i>
+                              </button>
+                            </div>
+
+                            <form class="custom_form">
+                              <div class="p-4">
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                  <div>
+                                    <label for=""> Name *</label>
+                                    <div class="mt-2">
+                                      <input
+                                        type="text"
+                                        placeholder="Enter Name"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div>
+                                    <label for=""> Username </label>
+                                    <div class="mt-2">
+                                      <input
+                                        type="text"
+                                        placeholder="Enter Username"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                  <div>
+                                    <label for=""> Number</label>
+                                    <div class="mt-2">
+                                      <input
+                                        type="text"
+                                        placeholder="Enter Number"
+                                      />
+                                    </div>
+                                  </div>
+
+                                  <div>
+                                    <label for=""> Password </label>
+                                    <div class="mt-2">
+                                      <input
+                                        type="password"
+                                        placeholder="Enter Password"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="mb-4">
+                                  <label for=""> Email </label>
+                                  <div class="mt-2">
+                                    <input
+                                      type="email"
+                                      placeholder="Enter Email"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="mb-4">
+                                  <label for=""> Address </label>
+                                  <div class="mt-2">
+                                    <textarea
+                                      name=""
+                                      placeholder="Enter Full Address"
+                                      cols="5"
+                                    ></textarea>
+                                  </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                  <div>
+                                    <label for=""> Country </label>
+                                    <div class="mt-2">
+                                      <select class="select2">
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                      </select>
+                                    </div>
+                                  </div>
+
+                                  <div>
+                                    <label for=""> Status *</label>
+                                    <div class="mt-2">
+                                      <select class="select2">
+                                        <option value="AL">Active</option>
+                                        <option value="WY">UnActive</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="flex items-center p-4 border-t border-gray-200"
+                              >
+                                <button
+                                  data-modal-hide="AddGHAgent"
+                                  class="text-white bg-primary font-medium rounded-lg text-sm px-6 py-2.5 text-center"
+                                >
+                                  Submit
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Table -->
+                <div class="p-4">
+                  <div class="relative overflow-x-auto">
+                    <table class="w-full text-sm text-left border">
+                      <thead class="text-[13px] bg-gray-50 border-b">
+                        <tr>
+                          <th>S/l No</th>
+                          <th>
+                            <div class="flex items-center">
+                              Name
+                              <button class="ml-1 text-[11px] opacity-80">
+                                <i class="fa-solid fa-sort"></i>
+                              </button>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="flex items-center">
+                              Phone
+                              <button class="ml-1 text-[11px] opacity-80">
+                                <i class="fa-solid fa-sort"></i>
+                              </button>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="flex items-center">
+                              Email
+                              <button class="ml-1 text-[11px] opacity-80">
+                                <i class="fa-solid fa-sort"></i>
+                              </button>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="flex items-center">
+                              Country
+                              <button class="ml-1 text-[11px] opacity-80">
+                                <i class="fa-solid fa-sort"></i>
+                              </button>
+                            </div>
+                          </th>
+                          <th>
+                            <div class="flex items-center">
+                              Address
+                              <button class="ml-1 text-[11px] opacity-80">
+                                <i class="fa-solid fa-sort"></i>
+                              </button>
+                            </div>
+                          </th>
+
+                          <th>
+                            <div class="flex items-center">
+                              Username
+                              <button class="ml-1 text-[11px] opacity-80">
+                                <i class="fa-solid fa-sort"></i>
+                              </button>
+                            </div>
+                          </th>
+
+                          <th>
+                            <div class="flex items-center">
+                              Status
+                              <button class="ml-1 text-[11px] opacity-80">
+                                <i class="fa-solid fa-sort"></i>
+                              </button>
+                            </div>
+                          </th>
+
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr class="bg-white border-b">
+                          <td>1</td>
+                          <td>Md Nasim Uddin</td>
+                          <td>01618004406</td>
+                          <td>
+                            <p class="break-all">example@gmail.com</p>
+                          </td>
+                          <td>Bangladesh</td>
+                          <td>
+                            <p class="whitespace-normal">
+                              Pidex, Plot 62 (4N), Road 14/1, Block - G,
+                              Niketon, Gulshan Bangladesh
+                            </p>
+                          </td>
+                          <td>@nasim0994</td>
+                          <td>Active</td>
+                          <td>
+                            <div class="flex gap-3 items-center justify-center">
+                              <div>
+                                <button
+                                  class="hover:text-blue-600 duration-300"
+                                  title="Edit Info"
+                                  data-modal-target="GHAgentInfoEdit"
+                                  data-modal-toggle="GHAgentInfoEdit"
+                                >
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+
+                                <!-- GH Agent Info Edit -->
+                                <div
+                                  id="GHAgentInfoEdit"
+                                  tabindex="-1"
+                                  aria-hidden="true"
+                                  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0"
+                                >
+                                  <div
+                                    class="relative w-full max-w-2xl max-h-full"
+                                  >
+                                    <div
+                                      class="relative bg-white rounded-lg shadow"
+                                    >
+                                      <div
+                                        class="flex items-center justify-between p-4 border-b rounded-t"
+                                      >
+                                        <h3
+                                          class="text-base font-medium text-black flex gap-2 items-center"
+                                        >
+                                          <i class="fa-solid fa-truck-fast"></i>
+                                          Edit GH Agent
+                                        </h3>
+                                        <button
+                                          class="text-gray-400 hover:bg-gray-700 hover:text-white rounded-lg text-sm py-1 px-2 duration-300"
+                                          data-modal-hide="GHAgentInfoEdit"
+                                        >
+                                          <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                      </div>
+
+                                      <form class="custom_form">
+                                        <div class="p-4">
+                                          <div
+                                            class="grid grid-cols-2 gap-4 mb-4"
+                                          >
+                                            <div>
+                                              <label for=""> Name </label>
+                                              <div class="mt-2">
+                                                <input
+                                                  type="text"
+                                                  placeholder="Enter Name"
+                                                />
+                                              </div>
+                                            </div>
+
+                                            <div>
+                                              <label for=""> Username </label>
+                                              <div class="mt-2">
+                                                <input
+                                                  type="text"
+                                                  placeholder="Enter Username"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div
+                                            class="grid grid-cols-2 gap-4 mb-4"
+                                          >
+                                            <div>
+                                              <label for=""> Number</label>
+                                              <div class="mt-2">
+                                                <input
+                                                  type="text"
+                                                  placeholder="Enter Number"
+                                                />
+                                              </div>
+                                            </div>
+
+                                            <div>
+                                              <label for=""> Password </label>
+                                              <div class="mt-2">
+                                                <input
+                                                  type="password"
+                                                  placeholder="Enter Password"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="mb-4">
+                                            <label for=""> Email </label>
+                                            <div class="mt-2">
+                                              <input
+                                                type="email"
+                                                placeholder="Enter Email"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <div class="mb-2">
+                                            <label for=""> Address </label>
+                                            <div class="mt-2">
+                                              <textarea
+                                                name=""
+                                                placeholder="Enter Full Address"
+                                                cols="5"
+                                              ></textarea>
+                                            </div>
+                                          </div>
+
+                                          <div
+                                            class="grid grid-cols-2 gap-4 mb-4"
+                                          >
+                                            <div>
+                                              <label for=""> Country </label>
+                                              <div class="mt-2">
+                                                <select
+                                                  class="select2"
+                                                  name="country"
+                                                >
+                                                  <option>Bangladesh</option>
+                                                  <option>Japan</option>
+                                                </select>
+                                              </div>
+                                            </div>
+
+                                            <div>
+                                              <label for=""> Status *</label>
+                                              <div class="mt-2">
+                                                <select
+                                                  class="select2"
+                                                  name="status"
+                                                >
+                                                  <option>Active</option>
+                                                  <option>UnActive</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div
+                                          class="flex items-center p-4 border-t border-gray-200"
+                                        >
+                                          <button
+                                            data-modal-hide="GHAgentInfoEdit"
+                                            class="text-white bg-primary font-medium rounded-lg text-[15px] px-6 py-2.5 text-center"
+                                          >
+                                            Update
+                                          </button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div>
+                                <button
+                                  data-modal-target="GHAgentPasswordChange"
+                                  data-modal-toggle="GHAgentPasswordChange"
+                                  class="hover:text-red-600 duration-300"
+                                  title="Edit Password"
+                                >
+                                  <i class="fa-solid fa-user-lock"></i>
+                                </button>
+
+                                <!-- GH Agent Password Change modal -->
+                                <div
+                                  id="GHAgentPasswordChange"
+                                  tabindex="-1"
+                                  aria-hidden="true"
+                                  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-y-auto md:inset-0"
+                                >
+                                  <div
+                                    class="relative w-full max-w-2xl max-h-full"
+                                  >
+                                    <div
+                                      class="relative bg-white rounded-lg shadow"
+                                    >
+                                      <!-- Modal header -->
+                                      <div
+                                        class="flex items-center justify-between p-4 border-b rounded-t"
+                                      >
+                                        <h3
+                                          class="text-base font-semibold text-gray-900"
+                                        >
+                                          GH Agent Password Change
+                                        </h3>
+                                        <button
+                                          type="button"
+                                          class="text-gray-400 hover:bg-gray-800 hover:text-white rounded text-sm px-2 py-1"
+                                          data-modal-hide="GHAgentPasswordChange"
+                                        >
+                                          <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                      </div>
+
+                                      <form class="custom_form">
+                                        <div class="p-4">
+                                          <div class="mb-4">
+                                            <label for=""> Username </label>
+                                            <div class="mt-2">
+                                              <input
+                                                type="text"
+                                                placeholder="Enter UserName"
+                                                required
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <div>
+                                            <label for=""> New Password </label>
+                                            <div class="mt-2">
+                                              <input
+                                                type="password"
+                                                placeholder="Enter New Password"
+                                                required
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div
+                                          class="flex items-center p-4 border-t border-gray-200"
+                                        >
+                                          <button
+                                            data-modal-hide="GHAgentPasswordChange"
+                                            class="text-white bg-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                          >
+                                            Update
+                                          </button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr class="bg-white border-b">
+                          <td>2</td>
+                          <td>Nasim Uddin</td>
+                          <td>01618004406</td>
+                          <td>
+                            <p class="break-all">example@gmail.com</p>
+                          </td>
+                          <td>Bangladesh</td>
+                          <td>
+                            <p class="whitespace-normal">
+                              Pidex, Plot 62 (4N), Road 14/1, Block - G,
+                              Niketon, Gulshan Bangladesh
+                            </p>
+                          </td>
+                          <td>@nasim</td>
+                          <td>Active</td>
+                          <td>
+                            <div class="flex gap-3 items-center justify-center">
+                              <div>
+                                <button
+                                  class="hover:text-blue-600 duration-300"
+                                  title="Edit Info"
+                                  data-modal-target="GHAgentInfoEdit"
+                                  data-modal-toggle="GHAgentInfoEdit"
+                                >
+                                  <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+
+                                <!-- GH Agent Info Edit -->
+                                <div
+                                  id="GHAgentInfoEdit"
+                                  tabindex="-1"
+                                  aria-hidden="true"
+                                  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0"
+                                >
+                                  <div
+                                    class="relative w-full max-w-2xl max-h-full"
+                                  >
+                                    <div
+                                      class="relative bg-white rounded-lg shadow"
+                                    >
+                                      <div
+                                        class="flex items-center justify-between p-4 border-b rounded-t"
+                                      >
+                                        <h3
+                                          class="text-base font-medium text-black flex gap-2 items-center"
+                                        >
+                                          <i class="fa-solid fa-truck-fast"></i>
+                                          Edit GH Agent
+                                        </h3>
+                                        <button
+                                          class="text-gray-400 hover:bg-gray-700 hover:text-white rounded-lg text-sm py-1 px-2 duration-300"
+                                          data-modal-hide="GHAgentInfoEdit"
+                                        >
+                                          <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                      </div>
+
+                                      <form class="custom_form">
+                                        <div class="p-4">
+                                          <div
+                                            class="grid grid-cols-2 gap-4 mb-4"
+                                          >
+                                            <div>
+                                              <label for=""> Name </label>
+                                              <div class="mt-2">
+                                                <input
+                                                  type="text"
+                                                  placeholder="Enter Name"
+                                                />
+                                              </div>
+                                            </div>
+
+                                            <div>
+                                              <label for=""> Username </label>
+                                              <div class="mt-2">
+                                                <input
+                                                  type="text"
+                                                  placeholder="Enter Username"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div
+                                            class="grid grid-cols-2 gap-4 mb-4"
+                                          >
+                                            <div>
+                                              <label for=""> Number</label>
+                                              <div class="mt-2">
+                                                <input
+                                                  type="text"
+                                                  placeholder="Enter Number"
+                                                />
+                                              </div>
+                                            </div>
+
+                                            <div>
+                                              <label for=""> Password </label>
+                                              <div class="mt-2">
+                                                <input
+                                                  type="password"
+                                                  placeholder="Enter Password"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="mb-4">
+                                            <label for=""> Email </label>
+                                            <div class="mt-2">
+                                              <input
+                                                type="email"
+                                                placeholder="Enter Email"
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <div class="mb-2">
+                                            <label for=""> Address </label>
+                                            <div class="mt-2">
+                                              <textarea
+                                                name=""
+                                                placeholder="Enter Full Address"
+                                                cols="5"
+                                              ></textarea>
+                                            </div>
+                                          </div>
+
+                                          <div
+                                            class="grid grid-cols-2 gap-4 mb-4"
+                                          >
+                                            <div>
+                                              <label for=""> Country </label>
+                                              <div class="mt-2">
+                                                <select
+                                                  class="select2"
+                                                  name="country"
+                                                >
+                                                  <option>Bangladesh</option>
+                                                  <option>Japan</option>
+                                                </select>
+                                              </div>
+                                            </div>
+
+                                            <div>
+                                              <label for=""> Status *</label>
+                                              <div class="mt-2">
+                                                <select
+                                                  class="select2"
+                                                  name="status"
+                                                >
+                                                  <option>Active</option>
+                                                  <option>UnActive</option>
+                                                </select>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div
+                                          class="flex items-center p-4 border-t border-gray-200"
+                                        >
+                                          <button
+                                            data-modal-hide="GHAgentInfoEdit"
+                                            class="text-white bg-primary font-medium rounded-lg text-[15px] px-6 py-2.5 text-center"
+                                          >
+                                            Update
+                                          </button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div>
+                                <button
+                                  data-modal-target="GHAgentPasswordChange"
+                                  data-modal-toggle="GHAgentPasswordChange"
+                                  class="hover:text-red-600 duration-300"
+                                  title="Edit Password"
+                                >
+                                  <i class="fa-solid fa-user-lock"></i>
+                                </button>
+
+                                <!-- GH Agent Password Change modal -->
+                                <div
+                                  id="GHAgentPasswordChange"
+                                  tabindex="-1"
+                                  aria-hidden="true"
+                                  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-y-auto md:inset-0"
+                                >
+                                  <div
+                                    class="relative w-full max-w-2xl max-h-full"
+                                  >
+                                    <div
+                                      class="relative bg-white rounded-lg shadow"
+                                    >
+                                      <!-- Modal header -->
+                                      <div
+                                        class="flex items-center justify-between p-4 border-b rounded-t"
+                                      >
+                                        <h3
+                                          class="text-base font-semibold text-gray-900"
+                                        >
+                                          GH Agent Password Change
+                                        </h3>
+                                        <button
+                                          type="button"
+                                          class="text-gray-400 hover:bg-gray-800 hover:text-white rounded text-sm px-2 py-1"
+                                          data-modal-hide="GHAgentPasswordChange"
+                                        >
+                                          <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                      </div>
+
+                                      <form class="custom_form">
+                                        <div class="p-4">
+                                          <div class="mb-4">
+                                            <label for=""> Username </label>
+                                            <div class="mt-2">
+                                              <input
+                                                type="text"
+                                                placeholder="Enter UserName"
+                                                required
+                                              />
+                                            </div>
+                                          </div>
+
+                                          <div>
+                                            <label for=""> New Password </label>
+                                            <div class="mt-2">
+                                              <input
+                                                type="password"
+                                                placeholder="Enter New Password"
+                                                required
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div
+                                          class="flex items-center p-4 border-t border-gray-200"
+                                        >
+                                          <button
+                                            data-modal-hide="GHAgentPasswordChange"
+                                            class="text-white bg-primary font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                          >
+                                            Update
+                                          </button>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Pagination -->
+                  <nav class="flex items-center justify-between pt-4">
+                    <span class="text-sm font-normal text-gray-500">
+                      Showing
+                      <span class="font-semibold text-gray-900"> 1-10 </span>
+                      of
+                      <span class="font-semibold text-gray-900"> 1000 </span>
+                    </span>
+
+                    <ul class="inline-flex items-center -space-x-px">
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100"
+                        >
+                          <i class="fa-solid fa-chevron-left"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100"
+                        >
+                          1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100"
+                        >
+                          2
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          aria-current="page"
+                          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100"
+                        >
+                          3
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100"
+                          >...</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100"
+                        >
+                          100
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100"
+                        >
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="py-2 border-t mt-14">
+              <p class="text-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                <span class="text-primary font-medium">Pidex Infocy!</span>
+              </p>
+            </footer>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".select2").select2();
+      });
+    </script>
+    <script src="../../asset/javascript/script.js"></script>
+  </body>
+</html>

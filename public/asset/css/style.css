@@ -1,0 +1,341 @@
+.container {
+  max-width: 1200px !important;
+  margin: auto;
+}
+
+/* --------------Header------------- */
+.menu {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  font-size: 15px;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #404040;
+
+  transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #0f218b;
+}
+
+.active {
+  color: #0f218b !important;
+}
+
+/* ------------Sidebar--------- */
+.sidebar {
+  width: 250px;
+  max-height: 87vh;
+  overflow-y: auto;
+  position: fixed;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar_items > ul > li > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ddd;
+  padding: 6px 8px;
+  border-radius: 4px;
+
+  transition: all 0.3s ease;
+}
+
+.sidebar_items ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar_items > ul > li > div:hover {
+  background: #0f218b !important;
+  color: #fff !important;
+}
+
+.sidebar_items ul li a i {
+  opacity: 0.8;
+}
+
+.active_sidebar {
+  background: #0f218b !important;
+  color: #fff !important;
+}
+
+.dropdown {
+  max-height: 0px;
+  overflow: hidden;
+}
+.dropdown_show {
+  max-height: max-content;
+}
+
+.dropdown_btn > i {
+  margin-top: 3px;
+}
+
+.arrow_rotate .fa-angle-down {
+  transform: rotate(180deg);
+  margin-top: 0px !important;
+}
+
+.dropdown_items {
+  background: #eeededdd;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px;
+}
+
+.dropdown_items > li > a {
+  background: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.dropdown_item:hover {
+  color: #0f218b;
+}
+
+.dropdown_items .dropdown_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+
+  transition: all 0.3s ease;
+}
+
+.sub_dropdown {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.sub_dropdown_show {
+  max-height: max-content;
+}
+
+.sub_dropdown_items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px;
+  padding-left: 15px;
+  margin-top: 6px;
+  color: #404040;
+  font-size: 14.5px;
+}
+
+.sub_dropdown_btn i {
+  margin-top: 3px;
+}
+
+.sub_dropdown_items li a:hover {
+  color: #0f218b;
+}
+
+/* -----------Main Content---------- */
+.main_content {
+  width: calc(100% - 270px);
+  position: relative;
+  left: 270px;
+}
+
+.content_menu ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  font-size: 15px;
+}
+
+.content_menu ul li a {
+  border: 1px solid #ddd;
+  min-height: 80px;
+  border-radius: 4px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  transition: all 0.3s ease;
+}
+
+.content_menu ul li a:hover {
+  color: #0f218b !important;
+  border-color: #0f218b !important;
+}
+
+/* -----------Common CSS------------- */
+
+/* Main content head */
+.main_content_head {
+  background: #0f218b;
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px 12px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* -------Table------- */
+table thead tr th {
+  padding: 8px;
+  border-right: 1px solid #ddd;
+}
+
+table tbody tr td {
+  padding: 4px 8px;
+  border-right: 1px solid #ddd;
+}
+
+table tfoot tr td {
+  padding: 4px 8px;
+  border-right: 1px solid #ddd;
+}
+
+/* -------Filter input------- */
+.filter_input {
+  position: relative;
+  font-size: 14px;
+}
+
+.filter_input input {
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  padding: 7px 28px 8px 10px;
+  outline: none;
+  background: transparent;
+}
+
+.filter_input span {
+  /* absolute right-3 top-1.5 opacity-60 text-sm */
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  opacity: 0.6;
+}
+
+/* ----------Modal Form---------- */
+.custom_form {
+  font-size: 15px;
+}
+
+.custom_form input {
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  outline: none;
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+.custom_form textarea {
+  width: 100%;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  outline: none;
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+/* -----------Select 2 Dropdown------------- */
+span.select2 {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+  border-color: #ddd;
+  border-radius: 3px;
+  height: 35px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 32px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  top: 5px;
+}
+
+input.select2-search__field {
+  border: 1px solid #ddd !important;
+  border-radius: 3px;
+}
+
+.statement_table tbody tr td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* -------------Sign Up In------------- */
+.signUpIn_form {
+  padding: 30px 10px;
+}
+
+.signUpIn_form .form_control {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.signUpIn_form input {
+  width: 100%;
+  padding: 6px 35px 6px 16px;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: transparent;
+  font-size: 15px;
+}
+
+.signUpIn_form input::placeholder{
+color: #ddddddaf;
+font-size: 14px;
+}
+
+
+.signUpIn_form .form_control i {
+  position: absolute;
+  right: 16px;
+  top: 11px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.login{
+  background-image: linear-gradient(180deg,
+      #0000003b,
+      #0000006e),
+    url(../../asset/images/s.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login_form {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(20px);
+  --webkit-backdrop-filter: blur(20px);
+  box-shadow: 0px 0px 32PX 0 rgb(0 0 0 / 33%);
+}

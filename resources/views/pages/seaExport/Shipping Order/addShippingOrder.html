@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FFSM</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../../asset/javascript/tailwind.config.js"></script>
+    <!-- Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- jquery-ui CSS -->
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <!-- Select2 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../../../asset/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="py-2 shadow sticky top-0 z-50 bg-light">
+      <div class="container">
+        <div class="flex justify-between items-center">
+          <a href="../../../index.html">
+            <img src="../../../asset/images/logo.png" alt="" class="w-48" />
+          </a>
+    
+          <nav>
+            <ul class="menu">
+              <li>
+                <a href="../../../index.html">
+                  <i class="fa-solid fa-house"></i>
+                  <p class="font-medium">Home</p>
+                </a>
+              </li>
+    
+              <li>
+                <a href="../seaExport.html" class="active">
+                  <i class="fa-solid fa-ship"></i>
+                  <p class="font-medium">Sea Export</p>
+                </a>
+              </li>
+    
+              <li>
+                <a href="../../seaImport/seaImport.html">
+                  <i class="fa-solid fa-ship"></i>
+                  <p class="font-medium">Sea Import</p>
+                </a>
+              </li>
+    
+              <li>
+                <a href="../../airExport/airExport.html">
+                  <i class="fa-solid fa-plane-departure"></i>
+                  <p class="font-medium">Air Export</p>
+                </a>
+              </li>
+    
+              <li>
+                <a href="../../airImport/airImport.html">
+                  <i class="fa-solid fa-plane-arrival"></i>
+                  <p class="font-medium">Air Import</p>
+                </a>
+              </li>
+    
+              <li>
+                <a href="../../maintenance/maintenance.html">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  <p class="font-medium">Maintenance</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="pt-5">
+      <div class="container">
+        <div class="flex gap-5">
+          <aside class="sidebar">
+            <nav class="sidebar_items">
+              <ul class="flex flex-col gap-2 text-[15px]">
+                <li>
+                  <div>
+                    <a href="../../../index.html">
+                      <i class="fa-solid fa-house"></i>
+                      <p class="font-medium">Home</p>
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="active_sidebar">
+                    <a href="../seaExport.html">
+                      <i class="fa-solid fa-ship"></i>
+                      <p class="font-medium">Sea Export</p>
+                    </a>
+
+                    <button class="dropdown_btn arrow_rotate">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown dropdown_show">
+                    <ol class="dropdown_items">
+                      <li>
+                        <button
+                          class="dropdown_item sub_dropdown_btn"
+                        >
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Booking</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="addBooking.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Booking</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="bookingList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Booking List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn arrow_rotate active">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Shipping Order</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown sub_dropdown_show">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../Shipping Order/addShippingOrder.html" class="active">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Shipping Order</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../Shipping Order/shippingOrderList.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Shipping Order List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Cargo Receive</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../Cargo Receive/addCargoReceive.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Cargo Receive</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../Cargo Receive/cargoReceiveList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Cargo Receive List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Cargo Stuffing</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../Cargo Stuffing/addStuffing.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Stuffing</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../Cargo Stuffing/stuffingList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Stuffing List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../Cargo Stuffing/addStuffingPackage.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Stuffing Package</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../Cargo Stuffing/stuffingPackageList.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Stuffing Package List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Shipment Advice</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../Shipment Advice/">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Shipment Advice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../Shipment Advice/">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Shipment Advice List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">HBL</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../HBL/addHBL.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add HBL</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../HBL/HBLList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">HBL List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">MBL</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../MBL/add1stLegMBL.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add 1st Leg MBL</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../MBL/1stLegMBLList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">1st Leg MBL List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../MBL/add2ndLegMBL.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add 2nd Leg MBL</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../MBL/2ndLegMBLList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">2nd Leg MBL List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../MBL/add3rdLegMBL.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add 3rd Leg MBL</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../MBL/3rdLegMBLList.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">3rd Leg MBL List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Freight Invoice</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../Freight Invoice/addFreightInvoice.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Freight Invoice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../Freight Invoice/freightInvoice.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Freight Invoice</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Debit Note</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../Debit Note/addDebitNote.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Debit Note</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../Debit Note/debitNote.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Debit Note</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Credit Note</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../Credit Note/addCreditNote.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Credit Note</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../Credit Note/creditNote.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Credit Note</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Expense Bill</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../Expense Bill/addExpenseBill.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Expense Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../Expense Bill/expenseBill.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Expense Bill</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Report</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../Report/profitLossStatement.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  Profit & Loss Statement
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../Report/volumeReport.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Volume Report</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+                    </ol>
+                  </nav>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="../../seaImport/seaImport.html">
+                      <i class="fa-solid fa-ship"></i>
+                      <p class="font-medium">Sea Import</p>
+                    </a>
+
+                    <button class="dropdown_btn">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown">
+                    <ol class="dropdown_items">
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">House Bill</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/House Bill/addHouseBill.html"
+                              >
+                                <i
+                                  class="fa-solid fa-house-chimney-medical"
+                                ></i>
+                                <p class="font-medium">Add House Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/House Bill/houseBillList.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">House Bill List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Master Bill</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/Master Bill/addMasterBill.html"
+                              >
+                                <i class="fa-solid fa-landmark"></i>
+                                <p class="font-medium">Add Master Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Master Bill/masterBillList.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Master Bill List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Arrival Notice</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/Arrival Notice/addArrivalNotice.html"
+                              >
+                                <i class="fa-solid fa-comment-medical"></i>
+                                <p class="font-medium">Add Arrival Notice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Arrival Notice/arrivalNoticeList.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Arrival Notice List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Forward Letter</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/Forward Letter/addForwardLetter.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Forward Letter</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Forward Letter/forwardLetterList.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Forward Letter List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Delivery Order</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/Delivery Order/addDeliveryOrder.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Delivery Order</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Delivery Order/deliveryOrderList.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Delivery Order List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Freight Invoice</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/Freight Invoice/addFreightInvoice.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Freight Invoice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Freight Invoice/freightInvoice.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Freight Invoice</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Freight Invoice/freightInvoiceRegister.html"
+                              >
+                                <i
+                                  class="fa-regular fa-folder-open text-xl"
+                                ></i>
+                                <p class="font-medium">
+                                  Freight Invoice Register
+                                </p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Expense Bill</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/Expense Bill/addExpenseBill.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Expense Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Expense Bill/expenseBill.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Expense Bill List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Expense Bill/expenseBillRegister.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Expense Bill Register</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Custom Expense Bill</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/Custom Expense Bill/addCustomExpense.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">
+                                  Add Custom Expense Bill
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Custom Expense Bill/customExpenseBill.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  Custom Expense Bill List
+                                </p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Debit Note</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/Debit Note/addDebitNote.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Debit Note</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Debit Note/debitNote.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Debit Note List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Debit Note/debitNoteRegister.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Debit Note Register</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Credit Note</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../../seaImport/Credit Note/">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add Credit Note</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Credit Note/creditNote.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Credit Note List</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Credit Note/creditNoteRegister.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Credit Note Register</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">C&F Bill</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a href="../../seaImport/C&F Bill/addCFBill.html">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">Add C&F Bill</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a href="../../seaImport/C&F Bill/cfBill.html">
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">C&F Bill List</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">C&F Bill Credit Note</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/C&F Bill Credit Note/addCFBillCreditNote.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">
+                                  Add C&F Bill Credit Note
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/C&F Bill Credit Note/cfBillCredit.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  C&F Bill Credit Note List
+                                </p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">C&F Bill Debit Note</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/C&F Bill Debit Note/addCFBillDebitNote.html"
+                              >
+                                <i class="fa-solid fa-folder-plus"></i>
+                                <p class="font-medium">
+                                  Add C&F Bill Debit Note
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/C&F Bill Debit Note/cfBillDebit.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  C&F Bill Debit Note List
+                                </p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+
+                      <li>
+                        <button class="dropdown_item sub_dropdown_btn">
+                          <a>
+                            <i class="fa-solid fa-folder-plus"></i>
+                            <p class="font-medium">Report</p>
+                          </a>
+
+                          <i class="fa-solid fa-angle-down"></i>
+                        </button>
+
+                        <nav class="sub_dropdown">
+                          <ol class="sub_dropdown_items">
+                            <li>
+                              <a
+                                href="../../seaImport/Report/profitLossStatement.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">
+                                  Profit & Loss Statement
+                                </p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Report/customProfitLossStatement.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Custom Profit & Loss</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Report/volumeReport.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">Volume Report</p>
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="../../seaImport/Report/cfVolumeReport.html"
+                              >
+                                <i class="fa-solid fa-table-list"></i>
+                                <p class="font-medium">C&F Volume Report</p>
+                              </a>
+                            </li>
+                          </ol>
+                        </nav>
+                      </li>
+                    </ol>
+                  </nav>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="../airExport/airExport.html">
+                      <i class="fa-solid fa-plane-departure"></i>
+                      <p class="font-medium">Air Export</p>
+                    </a>
+
+                    <button class="dropdown_btn">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown"></nav>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="../airImport/airImport.html">
+                      <i class="fa-solid fa-plane-arrival"></i>
+                      <p class="font-medium">Air Import</p>
+                    </a>
+
+                    <button class="dropdown_btn">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown"></nav>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="../maintenance/maintenance.html">
+                      <i class="fa-solid fa-screwdriver-wrench"></i>
+                      <p class="font-medium">Maintenance</p>
+                    </a>
+
+                    <button class="dropdown_btn">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </button>
+                  </div>
+
+                  <nav class="dropdown">
+                    <ol class="dropdown_items">
+                      <li>
+                        <a href="./shipper.html">
+                          <i class="fa-solid fa-truck-fast"></i>
+                          <p class="font-medium">Shipper</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./consignee.html">
+                          <i class="fa-solid fa-paper-plane"></i>
+                          <p class="font-medium">consignee</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./agent.html">
+                          <i class="fa-solid fa-users"></i>
+                          <p class="font-medium">Agent</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="./c&fAgent.html">
+                          <i class="fa-solid fa-users"></i>
+                          <p class="font-medium">C&F Agent</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-solid fa-users"></i>
+                          <p class="font-medium">GH Agent</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="pages/maintenance.html">
+                          <i class="fa-solid fa-toolbox"></i>
+                          <p class="font-medium">Carrier</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Carrier</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Container</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">For VSL</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">MTR VSL</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Mode</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">3rd Party</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Port</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="">
+                          <i class="fa-regular fa-folder-open text-xl"></i>
+                          <p class="font-medium">Key Account</p>
+                        </a>
+                      </li>
+                    </ol>
+                  </nav>
+                </li>
+
+                <li>
+                  <div>
+                    <a href="">
+                      <i class="fa-solid fa-bell"></i>
+                      <p class="font-medium">Notification</p>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="main_content">
+            <div class="min-h-[73vh]">
+              <div class="main_content_head">
+                <nav class="flex text-[15px]" aria-label="Breadcrumb">
+                  <ol class="flex items-center space-x-1 font-medium">
+                    <li class="flex items-center">
+                      <a href="../seaExport.html" class="flex gap-2 items-center">
+                        <i class="fa-solid fa-ship"></i>
+                        Sea Export
+                      </a>
+                    </li>
+              
+                    <li aria-current="page">
+                      <div class="flex items-center">
+                        <i class="fa-solid fa-chevron-right fa-2xs mt-1"></i>
+                        <span class="ml-1 md:ml-2"> Add Shipping Order </span>
+                      </div>
+                    </li>
+                  </ol>
+                </nav>
+              
+                <div class="flex items-center gap-2 text-white">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <p>14-06-2023</p>
+                </div>
+              </div>
+
+              <div class="border rounded my-4">
+                <div class="border-b p-2 bg-gray-100">
+                  <div class="flex items-center gap-2 font-medium">
+                    <i class="fa-solid fa-folder-plus"></i>
+                    <span>Add Shipping Order</span>
+                  </div>
+                </div>
+
+                <form class="custom_form p-4">
+                  <div class="grid grid-cols-2 justify-between">
+                    <div class="flex gap-2 items-center mb-4">
+                      <label class="w-1/3 text-end">Booking No. :</label>
+                      <div class="w-2/3">
+                        <select class="select" name="state">
+                          <option>--Select Booking No--</option>
+                          <option>Booking No</option>
+                          <option>Booking No</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="flex gap-4 items-center mb-4">
+                      <label class="w-1/3 text-end">Shipping Order No. :</label>
+                      <div class="w-2/3">
+                        <select class="select" name="state">
+                          <option>--Select Shipping Order No.--</option>
+                          <option>Shipping Order No.</option>
+                          <option>Shipping Order No.</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-2 justify-between">
+                    <div class="flex gap-2 items-center mb-4">
+                      <label class="w-1/3 text-end">Date :</label>
+                      <div class="w-2/3">
+                        <input
+                          type="text"
+                          class="datepicker"
+                          placeholder="17-06-2023"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex gap-4 items-center mb-4">
+                      <label class="w-1/3 text-end">CFS :</label>
+                      <div class="w-2/3">
+                        <select class="select" name="state">
+                          <option>--Select CFS--</option>
+                          <option>CFS</option>
+                          <option>CFS</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-2 items-start justify-between">
+                    <div class="flex gap-2 items-center mb-4">
+                      <label class="w-1/3 text-end">Carrier :</label>
+                      <div class="w-2/3">
+                        <select class="select" name="state">
+                          <option>--Select Carrier--</option>
+                          <option>Carrier</option>
+                          <option>Carrier</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="flex gap-4 items-start mb-4">
+                      <label class="w-1/3 text-end">Remark :</label>
+                      <div class="w-2/3">
+                        <textarea cols="7"></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="flex gap-4 items-center mb-4">
+                      <label class="w-[16%] text-end">
+                        Document Accompanied :
+                      </label>
+
+                      <div class="w-[84%] flex gap-4 items-center text-dark/90">
+                        <div class="flex items-center gap-1">
+                          <input
+                            id="ci"
+                            type="radio"
+                            name="documentAccompanied"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 cursor-pointer"
+                          />
+                          <label for="ci" class="cursor-pointer whitespace-nowrap">
+                            Commercial Invoice
+                          </label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                          <input
+                            id="pl"
+                            type="radio"
+                            name="documentAccompanied"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 cursor-pointer"
+                          />
+                          <label for="pl" class="cursor-pointer whitespace-nowrap">
+                            Packing List
+                          </label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                          <input
+                            id="gsp"
+                            type="radio"
+                            name="documentAccompanied"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 cursor-pointer"
+                          />
+                          <label for="gsp" class="cursor-pointer"> GSP </label>
+                        </div>
+
+                        <div class="flex items-center gap-1">
+                          <input
+                            id="co"
+                            type="radio"
+                            name="documentAccompanied"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 cursor-pointer"
+                          />
+                          <label for="co" class="cursor-pointer"> C/O </label>
+                        </div>
+                      </div>
+                    </div>
+
+                  <div class="mt-6 flex justify-end">
+                    <button class="px-5 py-2 bg-primary text-light rounded">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="py-2 border-t mt-14">
+              <p class="text-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                <span class="text-primary font-medium">Pidex Infocy!</span>
+              </p>
+            </footer>
+          </main>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- Date picker -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $(".datepicker").datepicker();
+      });
+    </script>
+
+    <!--  select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".select").select2();
+      });
+    </script>
+
+    <script src="../../../asset/javascript/script.js"></script>
+  </body>
+</html>
